@@ -15,8 +15,8 @@ class AuthService
         try {
             $response = Http::asForm()->post( config('app.url') . '/oauth/token', [
                 'grant_type' => 'password',
-                'client_id' => '9c2eae5a-a38b-4fb6-b2d2-a976e534c658',
-                'client_secret' => 'wSRYC88eYZl9h2xdLqB6a1LNkQMKt3McKIJ9cw9r',
+                'client_id' => env('CLIENT_ID'),
+                'client_secret' => env('CLIENT_SECRET'),
                 'username' => $username,
                 'password' => $password,
                 'scope' => '*',
